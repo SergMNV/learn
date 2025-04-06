@@ -1,0 +1,81 @@
+@Создание и удаление таблицы. Прикрепление базы данных:
+CREATE TABLE
+ATTACH DATABASE
+IF NOT EXISTS
+DROP TABLE
+
+@Типы данных:
+NULL
+INTEGER
+REAL
+TEXT
+BLOB
+NUMERIC
+
+@Ограничения столбцов и таблиц:
+PRIMARY KEY
+AUTOINCREMENT
+UNIQUE
+NULL / NOT NULL
+DEFAULT
+CHECK
+CONSTRAINT
+
+@Внешние ключи:
+FOREIGN KEY
+REFERENCES
+ON DELETE и ON UPDATE
+CASCADE
+SET NULL
+RESTRICT
+NO ACTION
+SET DEFAULT
+
+Изменение таблиц и столбцов:
+ALTER TABLE
+    >ADD COLUMN
+    >DROP COLUMN
+    >RENAME COLUMN
+
+Основные операции с данными:
+INSERT
+SELECT
+WHERE
+UPDATE
+DELETE
+REPLACE = INSERT OR REPLACE
+
+Запросы
+Выборка уникальных значений.
+DISTINCT
+IN
+BETWEEN
+LIKE % _
+GLOB * ? . [abc] [Aa0-Zz9] 
+IS NULL / IS NOT NULL
+
+Сортировка
+ORDER BY
+DESC
+ASC
+
+Получение диапазона строк. 
+LIMIT
+OFFSET
+
+Агрегатные функции
+AVG: вычисляет среднее значение
+SUM: вычисляет сумму значений
+MIN: вычисляет наименьшее значение
+MAX: вычисляет наибольшее значение
+COUNT: вычисляет количество строк в запросе
+
+Группировка
+GROUP BY
+
+Фильтрация групп. 
+HAVING
+
+Подзапросы
+Подзапросы в основных командах SQL
+Оператор EXISTS

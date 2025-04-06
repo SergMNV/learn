@@ -1,0 +1,24 @@
+SELECT number.op
+CASE 
+WHEN WHERE number GLOB '[-]?' THEN REPLACE(number.op,'-','')
+ELSE ('-' || number.op)
+END AS res
+FROM  opposite AS op;
+
+
+SELECT 
+CASE 
+    WHEN number.op GLOB '[-]?' THEN REPLACE(number.op,'-','')
+    ELSE '-' || number.op
+END AS res
+FROM opposite AS op;
+
+
+SELECT id, number,
+CASE
+  WHEN number < 0 THEN REPLACE(number,'-','')
+  WHEN number = 0 THEN 0,
+  ELSE '-' || number
+END AS res
+FROM opposite;
+

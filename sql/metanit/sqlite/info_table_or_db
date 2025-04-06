@@ -1,0 +1,25 @@
+PRAGMA table_list;
+PRAGMA schema.table_list;
+PRAGMA table_list(table-name);
+PRAGMA table_info(имя_таблицы);
+
+- Изменение таблиц и столбцов
+
+Переименование таблицы
+ALTER TABLE users
+RENAME TO people;
+
+Добавление нового столбца
+ALTER TABLE users
+ADD COLUMN email TEXT NOT NULL;
+
+Переименование столбца
+ALTER TABLE users
+RENAME COLUMN email TO login;
+
+Удаление столбца
+ALTER TABLE users
+DROP COLUMN login;
+
+ALTER TABLE table_name
+ALTER COLUMN column_name datatype;

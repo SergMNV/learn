@@ -1,0 +1,19 @@
+почему нет реализации метода connection??? 
+в классах mysqlQueryBuilder, sqliteQueryBuilder
+
+public function connection(): Connection
+{
+    return $this->connection;
+}
+
+
+в классе QueryBuilder лучше применить fetch вместо fetchAll???
+public function first(): array
+{
+    $stmt = $this->take(1)->prepare();
+    $stmt->execute();
+    
+    // return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+

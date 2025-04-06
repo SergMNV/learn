@@ -1,0 +1,7 @@
+Если вы хотите увидеть схему таблицы, включая связи, можно использовать следующий запрос:
+PRAGMA foreign_key_list('your_table_name');
+
+- внешние ключи
+    PRAGMA foreign_keys = ON;
+    
+SELECT name FROM sqlite_schema WHERE type='table';

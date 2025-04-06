@@ -1,0 +1,22 @@
+https://www.php.net/manual/ru/function.preg-replace-callback.php
+https://www.php.net/manual/ru/function.str-contains.php
+https://www.php.net/manual/ru/function.preg-match-all.php
+https://www.php.net/manual/ru/function.array-combine.php
+https://www.php.net/manual/ru/control-structures.continue.php
+https://www.php.net/manual/ru/language.oop5.overloading.php#object.call
+https://www.php.net/manual/ru/function.ob-start.php
+https://www.php.net/manual/ru/class.closure.php
+https://www.php.net/manual/ru/function.filemtime.php
+https://www.php.net/manual/ru/function.array-intersect-key.php
+https://www.php.net/manual/ru/function.hash-equals.php
+
+https://www.php.net/manual/ru/function.htmlspecialchars.php
+
+Встроенные интерфейсы и классы
+https://www.php.net/manual/ru/reserved.interfaces.php
+
+...$params
+https://www.php.net/manual/ru/functions.arguments.php#functions.variable-arg-list
+
+composer require filp/whoops
+composer require vlucas/phpdotenv
