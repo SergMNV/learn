@@ -1,0 +1,62 @@
+1 git и командная строка // 19
+    git version
+    clear
+    pwd
+    ls
+    ls -a
+    cd <folder>
+    mkdir <folder_name>
+    git connfig --global --list
+    git connfig --global user.name <name>
+    git connfig --global user.email <email>
+
+2 Локальные репозитории // 38
+    git init
+    git init -b <name_branch>
+
+3 ваш первый коммит // 48
+    git status
+    git add <file_name>
+    git add <file_name> <file_name>
+    git add -A
+    git commit -m <message>
+    git log
+    
+4 ветки // 58
+    git cat-file -p <commit_hash>
+    git branch <new_branch_name>
+    git switch <branch_name>
+    git checkout <branch_name>
+
+
+5 слияние // 77
+    git merge <branch_name>
+    git log --all
+    git checkout <commit_hash>
+    git checkout -b <name_new_branch>
+    git switch -c <name_new_branch>
+
+6 хостинговые сервисы и аутентификация // 99
+
+/*
+     git branch -d --remote origin/main
+*/
+
+7 начало работы с удаленным репозиторием // 104
+    git push
+    git remote add <short_name> <URL>
+    git remote
+    git remote -v
+    git push <short_name> <branch_name>
+    git branch --all
+
+8 клонирование и локальное сохранение // 122
+    git clone <URL> <name_folder>
+    // удаление веток // 130
+    git push <short_name> -d <branch_name>
+    git branch -d <branch_name>
+
+9 трехсторонние слияния
+10 конфликты слияния
+11 преобразование
+12 запросы на включение (запросы на слияния)

@@ -1,0 +1,44 @@
+git init -b main //41
+echo >> rainbowcolors.txt "Красный - первый цвет радуги" //46
+git add rainbowcolors.txt //52
+git commit -m "red"//54
+echo >> rainbowcolors.txt "Оранжевый - второй цвет радуги" //63
+git add rainbowcolors.txt // 65
+git commit -m "orange" // 65
+git cat-file -p <commit_hash> //67 проверка родительского коммита
+git branch feature // 68
+Новая ветка изначально будет указывать на коммит, который вы использовали при создании ветки
+git switch feature // 72
+echo >> rainbowcolors.txt "Жёлтый - третий цвет радуги." // 74
+git add rainbowcolors.txt // 74
+git commit -m "yellow" // 74
+echo >> rainbowcolors.txt "Зеленый - четвертый цвет радуги." // 85
+git switch main // 86 // error!!!
+удалить запись из файла rainbowcolors.txt "Зеленый - четвертый цвет радуги." // 87
+git switch main // 88
+git log --all // 90
+git merge feature // 91
+git chechout <hash_orange_commit> // 93 "detached HEAD state"
+git log --all // 94
+git switch main // 96
+регистрация на хостинге github // 99
+создать удаленный репозиторий rainbow-remote // 109
+git remote // 113
+git remote add origin https://github.com/SergMNV/rainbow-remore.git
+git remote
+git remote -v
+git push origin main // 116
+"Если вы кэшировали неверные или устаревшие учетные данные в Диспетчере учетных данных для Windows, Git не сможет получить доступ к GitHub. Чтобы сбросить кэшированные учетные данные и запросить ввод учетных данных в Git, откройте диспетчер учетных данных на панели управления Windows в разделе "Учетные записи пользователей" > "Диспетчер учетных данных". Найдите запись GitHub и удалите ее."
+https://docs.github.com/ru/get-started/git-basics/caching-your-github-credentials-in-git
+
+git switch feature // 119
+git push origin feature // 119
+git branch --all 
+git log
+
+**friend-rainbow**
+git clone <https://github.com/SergMNV/rainbow-remore.git> friend-rainbow //125
+cd friend-rainbow // 126
+git remote -v
+git branch --all
+//126

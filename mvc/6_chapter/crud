@@ -1,0 +1,44 @@
+создаем обьект Factory
+    обьект Factory имеет атрибут array $connectors
+    метод addConnector
+    метод connect
+
+создаем соединение методом connect
+
+метод connect возвращает обьект Connection
+
+обьект Connection имеет методы
+    pdo
+    query
+    createTable
+    alterTable
+
+у обьекта Connection вызываем метод qeury
+метод query возвращает QueryBuilder
+
+обьект QueryBuilder имеет 
+    атрибуты:
+        type
+        columns
+        table
+        limit
+        offset
+
+    методы:
+        all
+        prepare
+        compileSelect
+        compileLimit
+        first
+        take
+        from
+        select
+
+
+вызываем метод select 
+обьекта QueryBuilder
+метод принимает параметр ($columns)
+метод select возвращает $this (QueryBuilder)
+и устанавливает свойство $type = 'select'
+свойство columns = $columns
+возвращает QueryBuilder 
