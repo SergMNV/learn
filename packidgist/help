@@ -1,0 +1,77 @@
+Как создать свой пакет на Packagist
+1. Подготовка репозитория
+
+Создайте публичный репозиторий на GitHub, GitLab или Bitbucket. Packagist требует открытый git-репозиторий для публикации пакета.
+
+2. Инициализация проекта с Composer
+
+Клонируйте репозиторий на свой компьютер и перейдите в его директорию.
+
+Инициализируйте проект командой:
+
+text
+composer init
+Composer задаст вопросы о названии пакета (в формате vendor/package), описании, авторе, лицензии и других параметрах. Название должно быть уникальным для Packagist.
+
+3. Структура пакета и composer.json
+
+В корне проекта должен быть файл composer.json. Пример:
+
+json
+{
+  "name": "your-vendor-name/your-package-name",
+  "description": "Description of your package",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "YourVendorName\\YourPackageName\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Your Name",
+      "email": "you@example.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1"
+  }
+}
+Создайте папку src/ и разместите в ней исходные файлы классов, соблюдая PSR-4 автозагрузку.
+
+4. Добавьте README.md
+
+Напишите инструкцию по установке и использованию пакета в файле README.md.
+
+5. Загрузка кода и создание тега
+
+Добавьте файлы в git, сделайте коммит и отправьте изменения в репозиторий:
+
+text
+git add .
+git commit -m "Initial commit"
+git push origin main
+Для публикации стабильной версии создайте тег:
+
+text
+git tag 1.0.0
+git push origin 1.0.0
+6. Регистрация пакета на Packagist
+
+Зарегистрируйтесь на Packagist.org (можно через GitHub).
+
+Перейдите в раздел "Submit" и вставьте ссылку на ваш git-репозиторий.
+
+Нажмите "Check" и следуйте инструкциям. Если всё корректно, пакет появится в списке.
+
+7. Автоматизация обновлений
+
+Для автоматического обновления информации о новых версиях настройте webhook в настройках репозитория (GitHub: Settings → Webhooks → Add service → Packagist).
+
+8. Использование пакета
+
+Теперь ваш пакет можно установить командой:
+
+text
+composer require your-vendor-name/your-package-name
